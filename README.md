@@ -1,4 +1,4 @@
-# Technical-Writer
+# Technical-Writer a
 
 ## Overview
 Technical-Writer automates the updating of README files in response to code changes. Triggered by merged PRs, it leverages OpenAI's API for content generation and LangChain for orchestrating the automation process.
