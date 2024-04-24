@@ -30,13 +30,12 @@ jobs:
       # Run the Python script
       - name: Generate Updated README
         env:
-          GHITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OWNER: ${{ vars.OWNER }}
-          REPO: ${{ vars.REPO }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
         run: python main.py
 
-      # Additional step to enable debugging, helps in troublshooting
+      # Additional step to enable debugging
       - name: Enable Debug Logging
         run: |
-          echo "::set-env name=ACTIONS_STEP_DEBUG::true"  # Enables debug logging for more detailed output
-          
+          echo "ACTIONS_STEP_DEBUG=true" >> $GITHUB_ENV
