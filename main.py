@@ -6,7 +6,7 @@ from langchain.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnableLambda
 
 # Load environment variables
-load_dotenv()
+# load_dotenv()
 
 def format_data_for_openai(diffs, file_content, commit_messages):
     # Combine the changes into a string with clear delineation.
