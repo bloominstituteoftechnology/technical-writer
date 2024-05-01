@@ -6,9 +6,11 @@ on:
     inputs:
       OPENAI_API_KEY:
         required: true
+        type: string
         description: OpenAI API key for authentication
       GITHUB_TOKEN:
         required: true
+        type: string
         description: GitHub token for repository operations
 
 jobs:
