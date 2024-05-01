@@ -22,3 +22,13 @@ This project is released under the MIT License. See the `LICENSE` file for more 
 - OpenAI for providing the API used for generating content.
 - GitHub for hosting and automation capabilities.
 - LangChain for the automation framework used to streamline AI operations.
+
+## Updates
+- Added `update-readme.yaml` GitHub Action for automating README updates upon merging PRs.
+- Created `requirements.txt` to manage Python dependencies for the project.
+- Implemented `main.py` as a placeholder for future logic related to README generation.
+- Introduced `github_api.py` for handling interactions with the GitHub API.
+- Established basic testing setup with `test_github_api.py` for informal testing.
+- Included `.env.example` and added `.env` to `.gitignore` for better environment management.
+
+Kindly let me know if you need further assistance.
