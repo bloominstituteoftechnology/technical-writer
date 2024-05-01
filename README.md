@@ -12,6 +12,15 @@ Technical-Writer automates the updating of README files in response to code chan
 ## Current Status
 This project is in the early stages of development. Further instructions will be provided as the implementation progresses.
 
+## Getting Started
+To get started with this project, follow these steps:
+1. Copy the `.env.example` file and fill in your GitHub and OpenAI credentials.
+2. Install the required Python dependencies by running `pip install -r requirements.txt`.
+3. Set up the GitHub Action by following the instructions in `.github/workflows/update-readme.yaml`.
+
+## Testing
+You can run informal tests on the GitHub API functions by executing `python test_github_api.py`.
+
 ## Contributing
 Contributions are welcome. Please submit any issues or pull requests through GitHub.
 
