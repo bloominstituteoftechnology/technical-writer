@@ -10,6 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
 
+    # Inputs: Defines required parameters for the workflow
+    inputs:
+      OPENAI_API_KEY:
+        required: true
+        description: OpenAI API key for authentication
+      GITHUB_TOKEN:
+        required: true
+        description: GitHub token for repository operations
+
     steps:
       # Check out the repo to access its content
       - name: Checkout Repository
@@ -39,8 +48,8 @@ jobs:
       # Run the Python script
       - name: Generate Updated README
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ inputs.OPENAI_API_KEY }}
+          GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
           REPO_PATH: ${{ github.repository }}
           PR_NUMBER: ${{ env.pull_request_number }}
           COMMIT_SHA: ${{ env.commit_sha }}
