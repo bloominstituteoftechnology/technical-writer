@@ -1,23 +1,23 @@
 name: README Update Automation
 
 on:
-  pull_request:
-    types: [closed]
+  workflow_call:
+    # Inputs: Defines required parameters for the workflow
+    inputs:
+      OPENAI_API_KEY:
+        required: true
+        type: secret
+        description: OpenAI API key for authentication
+      GITHUB_TOKEN:
+        required: true
+        type: secret
+        description: GitHub token for repository operations
 
 jobs:
   update-readme:
     name: Update README after PR merge
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
-
-    # Inputs: Defines required parameters for the workflow
-    inputs:
-      OPENAI_API_KEY:
-        required: true
-        description: OpenAI API key for authentication
-      GITHUB_TOKEN:
-        required: true
-        description: GitHub token for repository operations
 
     steps:
       # Check out the repo to access its content
