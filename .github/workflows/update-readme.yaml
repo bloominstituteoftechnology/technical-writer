@@ -6,11 +6,9 @@ on:
     inputs:
       OPENAI_API_KEY:
         required: true
-        type: secret
         description: OpenAI API key for authentication
       GITHUB_TOKEN:
         required: true
-        type: secret
         description: GitHub token for repository operations
 
 jobs:
